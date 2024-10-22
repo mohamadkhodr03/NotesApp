@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteTableViewCell" rowHeight="97" id="KGk-i7-Jjw" customClass="NoteTableViewCell" customModule="NotesApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="324" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyE-6s-dgE">
+                        <rect key="frame" x="16" y="8" width="292" height="84"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClG-wg-qEh">
+                                <rect key="frame" x="120.33333333333333" y="12" width="51.333333333333329" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" systemColor="systemMintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM9-c5-VEo">
+                                <rect key="frame" x="12" y="44" width="268" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="DM9-c5-VEo" firstAttribute="top" secondItem="ClG-wg-qEh" secondAttribute="bottom" constant="30" id="3CD-Cu-YCO"/>
+                            <constraint firstItem="ClG-wg-qEh" firstAttribute="top" secondItem="qyE-6s-dgE" secondAttribute="top" constant="12" id="7Uo-6J-zFa"/>
+                            <constraint firstItem="DM9-c5-VEo" firstAttribute="top" secondItem="ClG-wg-qEh" secondAttribute="bottom" constant="15" id="M2c-Xw-AzF"/>
+                            <constraint firstAttribute="bottom" secondItem="DM9-c5-VEo" secondAttribute="bottom" constant="20" symbolic="YES" id="Pca-Bb-Ec0"/>
+                            <constraint firstAttribute="bottom" secondItem="DM9-c5-VEo" secondAttribute="bottom" constant="30" id="XWi-eM-nbT"/>
+                            <constraint firstItem="ClG-wg-qEh" firstAttribute="centerX" secondItem="qyE-6s-dgE" secondAttribute="centerX" id="c6p-37-UhF"/>
+                            <constraint firstItem="DM9-c5-VEo" firstAttribute="top" secondItem="ClG-wg-qEh" secondAttribute="bottom" constant="15" id="eB5-Za-Ot2"/>
+                            <constraint firstAttribute="trailing" secondItem="DM9-c5-VEo" secondAttribute="trailing" constant="12" id="kWF-PQ-lrs"/>
+                            <constraint firstItem="DM9-c5-VEo" firstAttribute="centerX" secondItem="qyE-6s-dgE" secondAttribute="centerX" id="nXw-Yr-Ab8"/>
+                            <constraint firstItem="DM9-c5-VEo" firstAttribute="leading" secondItem="qyE-6s-dgE" secondAttribute="leading" constant="12" id="vsz-RF-ynN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="qyE-6s-dgE" secondAttribute="trailing" constant="16" id="LfR-cP-hzX"/>
+                    <constraint firstItem="qyE-6s-dgE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="NDx-HW-Xo4"/>
+                    <constraint firstItem="qyE-6s-dgE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ik8-3W-AGX"/>
+                    <constraint firstAttribute="bottom" secondItem="qyE-6s-dgE" secondAttribute="bottom" constant="8" id="ytf-K6-0SR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="noteBackgroundView" destination="qyE-6s-dgE" id="FOm-RT-Qns"/>
+                <outlet property="noteDescriptionLabel" destination="DM9-c5-VEo" id="wNk-Um-eA2"/>
+                <outlet property="noteTittleLabel" destination="ClG-wg-qEh" id="r3p-Up-aOU"/>
+            </connections>
+            <point key="canvasLocation" x="141.98473282442748" y="38.732394366197184"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
